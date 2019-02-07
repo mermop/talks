@@ -4,11 +4,21 @@ $purple: #652857;
 
 body {
   font-family: 'NeueAlteGrotesk', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 html, body {
   margin: 0;
   padding: 0;
+}
+
+li {
+  line-height: 1.5;
+}
+
+.talk {
+  max-width: 40em;
+  margin: 0 auto;
 }
 
 .background {
