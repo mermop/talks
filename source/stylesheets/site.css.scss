@@ -1,24 +1,101 @@
+$orange: #bada55;
+$blue: #4184AC;
+$purple: #652857;
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  font-family: 'NeueAlteGrotesk', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
-a {
-  color: rgba(#000, 0.7);
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+.background {
+  padding: 0;
+  background-color: #ffffff;
+  animation: 30s ease-in-out infinite alternate bgcolor;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dash {
+  margin: 0;
+  padding: 0;
+  border: 10px dashed $orange;
+  transition: border-color 30s ease-in-out;
+  &--short {
+    border-width: 5px;
+  }
+  &--tall {
+    border-width: 15px;
+  }
+  &--1 {
+    animation: 5s ease-in-out infinite alternate scale-down-to-1;
+    transform: scaleX(1);
+  }
+  &--2 {
+    transform: scaleX(2);
+    animation: 5s ease-in-out infinite alternate scale-up-to-2;
+  }
+  &--2-down {
+    transform: scaleX(2);
+    animation: 5s ease-in-out infinite alternate scale-down-to-2;
+  }
+  &--4 {
+    transform: scaleX(4);
+    animation: 10s ease-in-out infinite alternate scale-up-to-4;
+  }
+  &--4-down {
+    transform: scaleX(4);
+    animation: 10s ease-in-out infinite alternate scale-down-to-4;
+  }
+  &--8 {
+    transform: scaleX(8);
+    animation: 5s ease-in-out infinite alternate scale-up-to-8;
+  }
+  &--long {
+    animation-duration: 7.5s;
+  }
+  &--fast {
+    animation-duration: 2.5s;
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+@keyframes scale-down-to-1 {
+  from { transform: scaleX(2); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes scale-up-to-2 {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(2); }
+}
+
+@keyframes scale-down-to-2 {
+  from { transform: scaleX(4); }
+  to { transform: scaleX(2); }
+}
+
+@keyframes scale-up-to-4 {
+  from { transform: scaleX(2); }
+  to { transform: scaleX(4); }
+}
+
+@keyframes scale-down-to-4 {
+  from { transform: scaleX(8); }
+  to { transform: scaleX(4); }
+}
+
+@keyframes scale-up-to-8 {
+  from { transform: scaleX(4); }
+  to { transform: scaleX(8); }
+}
+
+@keyframes bgcolor {
+  from { background-color: lighten($orange, 40); }
+  25% { background-color: $orange; }
+  50% { background-color: darken($orange, 20); }
+  75% { background-color: $purple }
+  to { background-color: lighten($purple, 10); }
 }
