@@ -1,0 +1,181 @@
+body {
+  font-family: 'NeueAlteGrotesk', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.background {
+  padding: 0;
+  background-color: #ffffff;
+  -webkit-animation: 30s ease-in-out infinite alternate bgcolor;
+          animation: 30s ease-in-out infinite alternate bgcolor;
+  height: 100vh;
+  overflow: hidden; }
+
+.dash {
+  margin: 0;
+  padding: 0;
+  border: 10px dashed #bada55;
+  -webkit-transition: border-color 30s ease-in-out;
+  transition: border-color 30s ease-in-out; }
+  .dash--short {
+    border-width: 5px; }
+  .dash--tall {
+    border-width: 15px; }
+  .dash--1 {
+    -webkit-animation: 5s ease-in-out infinite alternate scale-down-to-1;
+            animation: 5s ease-in-out infinite alternate scale-down-to-1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  .dash--2 {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-animation: 5s ease-in-out infinite alternate scale-up-to-2;
+            animation: 5s ease-in-out infinite alternate scale-up-to-2; }
+  .dash--2-down {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-animation: 5s ease-in-out infinite alternate scale-down-to-2;
+            animation: 5s ease-in-out infinite alternate scale-down-to-2; }
+  .dash--4 {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4);
+    -webkit-animation: 10s ease-in-out infinite alternate scale-up-to-4;
+            animation: 10s ease-in-out infinite alternate scale-up-to-4; }
+  .dash--4-down {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4);
+    -webkit-animation: 10s ease-in-out infinite alternate scale-down-to-4;
+            animation: 10s ease-in-out infinite alternate scale-down-to-4; }
+  .dash--8 {
+    -webkit-transform: scaleX(8);
+            transform: scaleX(8);
+    -webkit-animation: 5s ease-in-out infinite alternate scale-up-to-8;
+            animation: 5s ease-in-out infinite alternate scale-up-to-8; }
+  .dash--long {
+    -webkit-animation-duration: 7.5s;
+            animation-duration: 7.5s; }
+  .dash--fast {
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s; }
+
+@-webkit-keyframes scale-down-to-1 {
+  from {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); } }
+
+@keyframes scale-down-to-1 {
+  from {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); } }
+
+@-webkit-keyframes scale-up-to-2 {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  to {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); } }
+
+@keyframes scale-up-to-2 {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  to {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); } }
+
+@-webkit-keyframes scale-down-to-2 {
+  from {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); }
+  to {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); } }
+
+@keyframes scale-down-to-2 {
+  from {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); }
+  to {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); } }
+
+@-webkit-keyframes scale-up-to-4 {
+  from {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); }
+  to {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); } }
+
+@keyframes scale-up-to-4 {
+  from {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2); }
+  to {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); } }
+
+@-webkit-keyframes scale-down-to-4 {
+  from {
+    -webkit-transform: scaleX(8);
+            transform: scaleX(8); }
+  to {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); } }
+
+@keyframes scale-down-to-4 {
+  from {
+    -webkit-transform: scaleX(8);
+            transform: scaleX(8); }
+  to {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); } }
+
+@-webkit-keyframes scale-up-to-8 {
+  from {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); }
+  to {
+    -webkit-transform: scaleX(8);
+            transform: scaleX(8); } }
+
+@keyframes scale-up-to-8 {
+  from {
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4); }
+  to {
+    -webkit-transform: scaleX(8);
+            transform: scaleX(8); } }
+
+@-webkit-keyframes bgcolor {
+  from {
+    background-color: #fefefd; }
+  25% {
+    background-color: #bada55; }
+  50% {
+    background-color: #86a524; }
+  75% {
+    background-color: #652857; }
+  to {
+    background-color: #8a3676; } }
+
+@keyframes bgcolor {
+  from {
+    background-color: #fefefd; }
+  25% {
+    background-color: #bada55; }
+  50% {
+    background-color: #86a524; }
+  75% {
+    background-color: #652857; }
+  to {
+    background-color: #8a3676; } }
