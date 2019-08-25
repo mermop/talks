@@ -16,9 +16,10 @@ li {
   line-height: 1.5;
 }
 
-.talk {
+.container {
   max-width: 40em;
   margin: 0 auto;
+  padding: 1em 2vw;
 }
 
 .background {
@@ -108,4 +109,18 @@ li {
   50% { background-color: darken($orange, 20); }
   75% { background-color: $purple }
   to { background-color: lighten($purple, 10); }
+}
+
+img {
+  max-width: 100%;
+}
+
+.group-of-images {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  img {
+    flex-basis: 25%;
+    max-width: 200px;
+  }
 }
