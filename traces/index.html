@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Traces</title>
+    <link rel="stylesheet" href="/talks/stylesheets/site.css">
+    <script src="/talks/javascripts/site.js"></script>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Traces</h1>
+<p>Merrin Macleod, August 2019</p>
+<p>I'm interested in exploring the traces left on images by the people, machines and media that they go through.</p>
+<p>I did a one-minute sketch of the profile pictures of the 100 people I last followed on twitter.</p>
+<section class="group-of-images">
+  <img src="../images/traces/sketches/andrewtychen.jpeg" alt="">
+  <img src="../images/traces/sketches/d_j_t_.jpeg" alt="">
+  <img src="../images/traces/sketches/madmanchap.jpeg" alt="">
+  <img src="../images/traces/sketches/adamzdanielle.jpg" alt="">
+  <img src="../images/traces/sketches/pahlkadot.jpeg" alt="">
+  <img src="../images/traces/sketches/yourtechunion.jpeg" alt="">
+</section>
+<p>I trained a <a href="https://github.com/affinelayer/pix2pix-tensorflow">Pix2Pix</a> Tensorflow GAN on these sketches, and asked it to sketch some other profile pictures.</p>
+<section class="group-of-images">
+  <img src="../images/traces/generated-sketches/2.png" alt="">
+  <img src="../images/traces/generated-sketches/4.png" alt="">
+  <img src="../images/traces/generated-sketches/6.png" alt="">
+  <img src="../images/traces/generated-sketches/7.png" alt="">
+  <img src="../images/traces/generated-sketches/8.png" alt="">
+  <img src="../images/traces/generated-sketches/13.png" alt="">
+</section>
+<p>It quickly figured out the paper and pencil colour, and eventually the generator figured out something plausible enough to fool the discriminator most of the time - even though this was just a few epochs on my Macbook.</p>
+
+<p>More interesting was flipping it in the opposite direction - generating photos from the sketches.</p>
+<p>After a short period of training, it sort of superimposed the sketches onto some photo-like colours, then started taking pieces of the photos and putting them into the outputs.</p>
+<section class="group-of-images">
+  <img src="../images/traces/generated-photos/14.png" alt="">
+  <img src="../images/traces/generated-photos/15.png" alt="">
+  <img src="../images/traces/generated-photos/16.png" alt="">
+  <img src="../images/traces/generated-photos/17.png" alt="">
+  <img src="../images/traces/generated-photos/18.png" alt="">
+  <img src="../images/traces/generated-photos/20.png" alt="">
+</section>
+
+<p>After I left it running overnight it seemed to figure out eyes, but not where to put them.</p>
+<section class="group-of-images">
+  <img src="../images/traces/generated-photos/eyes-1.png" alt="">
+  <img src="../images/traces/generated-photos/eyes-2.png" alt="">
+  <img src="../images/traces/generated-photos/eyes-3.png" alt="">
+  <img src="../images/traces/generated-photos/eyes-7.png" alt="">
+  <img src="../images/traces/generated-photos/eyes-5.png" alt="">
+  <img src="../images/traces/generated-photos/eyes-6.png" alt="">
+</section>
+
+<p>Usually with the Pix2Pix GAN you'll have a training dataset and a test dataset, but I wanted to see how specialised it was on the training dataset, so I piped the training dataset back into the test dataset.</p>
+<p>The images were easy to recognise from their colours and layout, but had traces of the shapes of my sketches, and characteristic GAN glitches.</p>
+
+<section class="group-of-images">
+  <img src="../images/traces/generated-photos/specialised-1.png" alt="">
+  <img src="../images/traces/generated-photos/specialised-2.png" alt="">
+  <img src="../images/traces/generated-photos/specialised-3.png" alt="">
+  <img src="../images/traces/generated-photos/specialised-4.png" alt="">
+  <img src="../images/traces/generated-photos/specialised-5.png" alt="">
+  <img src="../images/traces/generated-photos/specialised-6.png" alt="">
+</section>
+
+<p>The final step: translating the images back through my brain and hands, and introducing the traces of a new medium - oil paint on canvas.</p>
+<section class="group-of-images">
+  <img src="../images/traces/painted-outputs/1.jpg" alt="">
+  <img src="../images/traces/painted-outputs/2.jpg" alt="">
+  <img src="../images/traces/painted-outputs/3.jpg" alt="">
+</section>
+
+<p>I'm interested in what was lost and what was gained through each of these translations and interpretations, and the difference between what is lost and gained through human and machine eyes. There are hints of what I've seen before and hints of what the machine has seen before, filling in gaps or informing shorthand depictions. The programming of my brain means that I will always reproduce eyes and arms in a sketch or painting, but won't always be true to exact positioning or colours; the GAN has its own prejudices too. </p>
+<p>There are traces of the size of pencils and paintbrushes and patches; the texture of canvas and paper and pixels; the imperfections of printing and scanning and moving between sizes and shapes; the limitations of my technical skills sketching and painting and the limitations of the GAN's training.</p>
+
+    </main>
+    <link rel="stylesheet" href="/talks/stylesheets/webfonts.css">
+  </body>
+</html>
