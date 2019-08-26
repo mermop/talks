@@ -206,4 +206,5 @@ img {
   flex-wrap: wrap; }
   .group-of-images img {
     flex-basis: 25%;
-    max-width: 200px; }
+    max-width: 200px;
+    max-height: 200px; }
